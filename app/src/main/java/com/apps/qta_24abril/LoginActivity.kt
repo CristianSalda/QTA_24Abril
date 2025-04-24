@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
         btnIngresar.setOnClickListener {
             val textoUsuario = etUsuario.text.toString().trim() // Obtiene el texto ASÍ COMO ESTÉ
 
-            val intent = Intent(this, QuitarFragmentoActivity::class.java).apply {
+            val intent = Intent(this, dosmit::class.java).apply {
                 putExtra("TEXTO_USUARIO", textoUsuario) // Envía el texto crudo
             }
             startActivity(intent)

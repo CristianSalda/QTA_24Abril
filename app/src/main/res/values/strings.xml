@@ -10,4 +10,9 @@
     <string name="dos_palabras">Dos palabras</string>
     <string name="dos_mitades">Dos mitades</string>
     <string name="saludo_bienvenida">Hola %1$s</string>
+    <string name="te_voy_a_ayudar_a_solucionar_el_problema_de_las_2_mitades">Te voy a ayudar a solucionar el problema de las 2 mitades.</string>
+    <string name="_1_ingresa_una_cadena_de_caracteres_n2_te_ayudar_a_cortar_la_cadena_en_dos_partes_iguales_si_la_longitud_de_la_cadena_es_impar_colocar_el_car_cter_central_en_la_primera_cadena_de_modo_que_la_primera_cadena_contenga_un_car_cter_m_s_que_la_segunda_n3_luego_imprimir_la_nueva_cadena_en_una_sola_fila_con_la_primera_y_la_segunda_mitad_intercambiadas_la_segunda_mitad_es_la_primera_y_la_primera_mitad_es_la_segunda">1. Ingresa una cadena de caracteres.\n2. Te ayudaré a cortar la cadena en dos partes iguales (si la longitud de la cadena es impar, colocaré el carácter central en la primera cadena, de modo que la primera cadena contenga un carácter más que la segunda).\n3. Luego imprimiré la nueva cadena en una sola fila con la primera y la segunda mitad intercambiadas (la segunda mitad es la primera y la primera mitad es la segunda).</string>
+    <string name="ingresa_una_cadena_de_caracteres">Ingresa una cadena de caracteres</string>
+    <string name="hello">Hello</string>
+    <string name="solucionar">Solucionar</string>
 </resources>

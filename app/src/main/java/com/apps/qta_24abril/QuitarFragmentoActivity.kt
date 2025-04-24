@@ -17,11 +17,8 @@ class QuitarFragmentoActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tv_bienvenida).text = "Hola $textoRecibido" // Muestra el texto directamente
 
 
-
-
-        // Listeners para los items de navegación
         findViewById<LinearLayout>(R.id.nav_mitades).setOnClickListener {
-            //startActivity(Intent(this, MitadesActivity::class.java))
+            startActivity(Intent(this, dosmit::class.java))
         }
 
     }

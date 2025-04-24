@@ -1,6 +1,7 @@
 package com.apps.qta_24abril
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.Typeface
@@ -16,22 +17,31 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
-class MainActivity : AppCompatActivity() {
+class dosmit : AppCompatActivity() {
 
     private lateinit var editTextInput: EditText
     private lateinit var solveButton: Button
     private lateinit var containerResultado: LinearLayout
     private lateinit var textViewBienvenida: TextView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dosmit) // Asegúrate de que este es el nombre correcto de tu layout XML
+
+        val textoRecibido = intent.getStringExtra("TEXTO_USUARIO") ?: "" // Si no hay texto, muestra vacío
+
+        findViewById<TextView>(R.id.tv_bienvenida).text = "Hola $textoRecibido" // Muestra el texto directamente
+
+        findViewById<LinearLayout>(R.id.nav_fragmento).setOnClickListener {
+            startActivity(Intent(this, dosmit::class.java))
+        }
 
         // Inicializar vistas
         editTextInput = findViewById(R.id.editTextInput)
         solveButton = findViewById(R.id.solveButton)
         containerResultado = findViewById(R.id.containerResultado)
-        textViewBienvenida = findViewById(R.id.textViewBienvenida)
+        textViewBienvenida = findViewById(R.id.tv_bienvenida)
 
         // Configurar el botón
         solveButton.setOnClickListener {
@@ -98,6 +108,8 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 Log.e("ERROR", "Error: ${e.message}")
             }
+
+
         }
     }
         }

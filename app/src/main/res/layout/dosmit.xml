@@ -42,10 +42,10 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/textViewBienvenida"
+                    android:id="@+id/tv_bienvenida"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hola usuario@email.com"
+                    android:text="@string/saludo_bienvenida"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="#000000"
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="16dp"
                     android:paddingBottom="12dp"
-                    android:text="Te voy a ayudar a solucionar el problema de las 2 mitades."
+                    android:text="@string/te_voy_a_ayudar_a_solucionar_el_problema_de_las_2_mitades"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
@@ -66,7 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="16dp"
-                    android:text="1. Ingresa una cadena de caracteres.\n2. Te ayudaré a cortar la cadena en dos partes \iguales\ (si la longitud de la cadena es impar, colocaré el carácter central en la primera cadena, de modo que la primera cadena contenga un carácter más que la segunda).\n3. Luego imprimiré la nueva cadena en una sola fila con la primera y la segunda mitad intercambiadas (la segunda mitad es la primera y la primera mitad es la segunda)."
+                    android:text="@string/_1_ingresa_una_cadena_de_caracteres_n2_te_ayudar_a_cortar_la_cadena_en_dos_partes_iguales_si_la_longitud_de_la_cadena_es_impar_colocar_el_car_cter_central_en_la_primera_cadena_de_modo_que_la_primera_cadena_contenga_un_car_cter_m_s_que_la_segunda_n3_luego_imprimir_la_nueva_cadena_en_una_sola_fila_con_la_primera_y_la_segunda_mitad_intercambiadas_la_segunda_mitad_es_la_primera_y_la_primera_mitad_es_la_segunda"
                     android:textColor="#000000"
                     android:textSize="14sp" />
 
@@ -84,7 +84,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Ingresa una cadena de caracteres"
+                        android:text="@string/ingresa_una_cadena_de_caracteres"
                         android:textColor="@android:color/black"
                         android:textSize="14sp" />
 
@@ -93,7 +93,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:hint="Hello"
+                        android:hint="@string/hello"
                         android:background="@drawable/edittext_background"
                         android:padding="12dp"
                         android:textSize="16sp"
@@ -104,7 +104,7 @@
                         android:id="@+id/solveButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Solucionar"
+                        android:text="@string/solucionar"
                         android:textColor="@android:color/white"
                         android:backgroundTint="#5AE4A8"
                         android:layout_gravity="center"
@@ -168,6 +168,7 @@
 
         <!-- Botón 2: Dos palabras -->
         <LinearLayout
+            android:id="@+id/nav_palabras"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -192,6 +193,7 @@
 
         <!-- Botón 3: Quitar fragmento -->
         <LinearLayout
+            android:id="@+id/nav_fragmento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
