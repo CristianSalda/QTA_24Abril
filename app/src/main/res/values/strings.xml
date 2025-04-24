@@ -6,4 +6,8 @@
     <string name="ingresar">Ingresar</string>
     <string name="iniciar_sesi_n">Iniciar sesión</string>
     <string name="descripcion_ilustracion_inicio">imagen inicio\n</string>
+    <string name="quitar_fragmento">Quitar fragmento</string>
+    <string name="dos_palabras">Dos palabras</string>
+    <string name="dos_mitades">Dos mitades</string>
+    <string name="saludo_bienvenida">Hola %1$s</string>
 </resources>
