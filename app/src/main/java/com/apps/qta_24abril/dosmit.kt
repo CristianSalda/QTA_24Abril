@@ -34,7 +34,7 @@ class dosmit : AppCompatActivity() {
         findViewById<TextView>(R.id.tv_bienvenida).text = "Hola $textoRecibido" // Muestra el texto directamente
 
         findViewById<LinearLayout>(R.id.nav_fragmento).setOnClickListener {
-            startActivity(Intent(this, dosmit::class.java))
+            startActivity(Intent(this, QuitarFragmentoActivity::class.java))
         }
 
         // Inicializar vistas
