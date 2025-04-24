@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ScrollView para el contenido principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomGreenContainer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Encabezado verde -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5AE4A8"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dos mitades"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Contenido general -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewBienvenida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hola usuario@email.com"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="12dp"
+                    android:text="Te voy a ayudar a solucionar el problema de las 2 mitades."
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <!-- Instrucciones -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:text="1. Ingresa una cadena de caracteres.\n2. Te ayudaré a cortar la cadena en dos partes \iguales\ (si la longitud de la cadena es impar, colocaré el carácter central en la primera cadena, de modo que la primera cadena contenga un carácter más que la segunda).\n3. Luego imprimiré la nueva cadena en una sola fila con la primera y la segunda mitad intercambiadas (la segunda mitad es la primera y la primera mitad es la segunda)."
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <!-- Campo de entrada y botón -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/textInputLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Ingresa una cadena de caracteres"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/editTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:hint="Hello"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp"
+                        android:textSize="16sp"
+                        android:inputType="text"
+                        android:layout_marginBottom="16dp" />
+
+                    <Button
+                        android:id="@+id/solveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Solucionar"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#5AE4A8"
+                        android:layout_gravity="center"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp" />
+                </LinearLayout>
+
+                <!-- Contenedor del resultado (vacío al inicio) -->
+                <LinearLayout
+                    android:id="@+id/containerResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/resultado_background"
+                    android:minHeight="60dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:visibility="visible">
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Contenedor inferior con fondo verde (ahora fijo en la parte inferior) -->
+    <LinearLayout
+        android:id="@+id/bottomGreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#5AE4A8"
+        android:gravity="center"
+        android:padding="12dp"
+        android:weightSum="3">
+
+        <!-- Botón 1: Dos mitades -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/imagen1"
+                android:contentDescription="Dos mitades" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dos mitades"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Botón 2: Dos palabras -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/imagen2"
+                android:contentDescription="Dos palabras" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dos palabras"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Botón 3: Quitar fragmento -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/imagen3"
+                android:contentDescription="Quitar fragmento" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quitar fragmento"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
